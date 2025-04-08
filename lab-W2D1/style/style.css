@@ -1,0 +1,202 @@
+/* 24/03/205 - Week 1 Day 3 */
+
+/* Estilos generales */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.logoClass {
+    width: 50px;  /* Ajusta el tamaño del logo */
+    height: auto;
+    /* margin-right: 10px; Agrega un margen a la derecha del logo   */
+    vertical-align: middle; /* Alinea verticalmente el logo con el menú */
+}
+
+.logoClass2 {
+    width: 150px;  /* Ajusta el tamaño del logo */
+    height: auto;
+    /* margin-right: 15px; Agrega un margen a la derecha del logo 
+    margin-left: 15px; Agrega un margen a la derecha del logo  */
+    vertical-align: middle; /* Alinea verticalmente el logo con el menú */
+    position: absolute;
+    left: 15px; /* Agrega un margen de 10 píxeles desde la izquierda */
+}
+
+.imgClass
+{
+    width: 60%;  /* Ajusta el tamaño de la imagen */
+    height: auto;
+    vertical-align: left; /* Alinea verticalmente la imagen con el menú */
+}
+.nav-barClass {
+    background-color: #8782b6;
+    color: #fff;
+    padding: 10px 0;
+    display: flex; /* Convierte el nav en un contenedor flexbox */
+    align-items: center;  /* Alinea verticalmente los elementos del nav */
+    justify-content: center; /* Centra horizontalmente los elementos del nav */
+}
+
+.nav-listClass {
+    list-style: none;
+    text-align: center;
+    display: flex; /* Añadido para mostrar los elementos en línea */
+}
+
+.nav-itemClass {
+    /* display: inline; */
+    margin: 0 15px;
+}
+
+.nav-linkClass {
+    color: #f30b0b;
+    text-decoration: none; /* Elimina los subrayados */
+    font-weight: bold;
+}
+
+.headingClass {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sectionClass {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.listClass {
+    list-style: none;
+    padding: 0;
+}
+
+.list-itemClass {
+    margin-bottom: 10px;
+}
+
+.linkClass {
+    color: #001aff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.footerClass {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #eee;
+}
+
+/* Estilos específicos para la página "Equipos" */
+.teams-listClass {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teams-itemClass {
+    margin: 10px;
+}
+
+/* Estilos específicos para la página "Resultados" */
+.results-itemClass {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilos específicos para la página "En Directo" */
+.live-itemClass {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* 25/03/205 - Week2 Day1- Seguir estilizando la web formateando los textos */
+
+.cursiv{
+    font-family: cursive; /*Establece la fuente del texto a una fuente cursiva.*/
+    font-size: 2em;   /*Establece el tamaño de la fuente a 1em (que es el tamaño de fuente predeterminado del elemento padre). */
+    color: #8d6237; /* RGB - 00 00 00 */  /*Establece el color del texto a un tono marrón. */
+    background-color: #f2dac2; /*Establece el color de fondo del elemento a un tono beige claro. */
+    /* text-align: center; Centra el texto horizontalmente dentro del elemento. */
+    /* margin: 20px 0; Agrega un margen vertical de 20 píxeles arriba y abajo del elemento, y un margen horizontal de 0 píxeles. */
+}
+
+.cursivOnly{
+    font-family: cursive; /*Establece la fuente del texto a una fuente cursiva.*/
+}
+
+.alignCenter{
+    text-align: center;
+}
+
+.alignLeft{
+    text-align: left;
+}
+
+
+.alignRight{
+    text-align: right;
+}
+
+.alignJustify{
+    text-align: justify;
+}
+
+.margin{
+    margin: 20px 0; /*Agrega un margen vertical de 20 píxeles arriba y abajo del elemento, y un margen horizontal de 0 píxeles. */
+}
+
+.geor{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-style: italic;
+    color: rgb(0, 0, 256);
+}
+
+.fontLarge{
+    font-size: 48px;
+}
+
+.fant{
+    font-family: fantasy;
+    /* font-size: medium; */
+    font-size: x-large;
+    color: rgb(250, 143, 19);
+}
+
+.weightLighter{
+    font-weight: lighter;
+}
+
+.weightNormal{
+    font-weight: normal;
+}
+
+
+.weightBold{
+    font-weight: bold; /* palabras en negrita */
+}
+
+.weightBolder{
+    font-weight: bolder;
+}
+
+.weight300{
+    font-weight: 300;
+}
+
+.espacio-vertical {
+    display: block; /* Asegura que el <br> se comporte como un bloque */
+    margin-bottom: 1200px; /* Ajusta el valor según sea necesario */
+}
