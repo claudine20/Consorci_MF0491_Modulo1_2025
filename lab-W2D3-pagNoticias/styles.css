@@ -1,0 +1,117 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header con imagen de fondo */
+header {
+    background-image: url('img/news.jpg');
+    background-size: cover; /* Que la imagen cubra todo el header */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    display: flex; /* Para activar el modo flexible. */
+    color: white;
+    /*justify-content: center; /* Centrar horizontalmente */
+    /*align-items: center; /* Centrar verticalmente */
+    text-align: center;
+    align-items: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 1.2em;
+}
+
+/* Navigation */
+.navigation {
+    background-color: #003366;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    gap: 30px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+
+.navigation a:hover {
+    background-color: #0055aa;
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Articles */
+.news-article {
+    background-color: #e9e9e9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #003366;
+}
+
+.news-article h3 {
+    margin-top: 0;
+}
+
+/* Text Styles for Paragraphs */
+.news-article p {
+    line-height: 1.6; /* Interlineado */
+    letter-spacing: 0.5px; /* Interletraje */
+    text-indent: 20px; /* Sangría de la primera línea */
+    column-count: 1; /* num de columnas de cada articulo*/
+}
+
+/* Aside */
+.sidebar {
+    padding: 20px;
+    background-color: #d9d9d9;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #003366;
+}
+
+/* Back to top links */
+.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #003366;
+    text-decoration: underline;
+}
