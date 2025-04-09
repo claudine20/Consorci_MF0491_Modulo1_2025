@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists Page - Semantic Version</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Artists Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#artist1">Artist A</a></li>
+                <li><a href="#artist2">Artist B</a></li>
+                <li><a href="#artist3">Artist C</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="artist1">
+            <article>
+                <h2>Artist A</h2>
+                <p>Information about <span class="highlight">Artist A</span>...</p>
+                <div class="details">
+                    <p>Featured works:</p>
+                    <ol>
+                        <li>Work 1</li>
+                        <li>Work 2</li>
+                        <li>Work 3</li>
+                    </ol>
+                    <span class="extra-info">Extra information about their beginnings.</span>
+                </div>
+                    <!-- Video element with controls and width set to 25% -->
+                    <video controls width="25%">
+                        <source src="media/video/cantante1.mp4" type="video/mp4">
+                        Su navegador no soporta el elemento de video.
+                    </video>
+                    <!-- Video element with controls and auto preload -->
+                    <audio autoplay controls muted loop preload="auto"> <!--autoplay = se reproduce automáticamente, controls = se ven los controles, muted = sin sonido, loop = se repite, preload="auto" = carga el audio al cargar la página-->
+                        <source src="media/audio/testAudio.mp3" type="audio/mp3"> <!--type="audio/mp3" es el tipo de audio-->
+                    </audio>
+           
+                <h3>Albums</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Album</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Album 1</td><td>2015</td></tr>
+                        <tr><td>Album 2</td><td>2017</td></tr>
+                        <tr><td>Album 3</td><td>2019</td></tr>
+                        <tr><td>Album 4</td><td>2021</td></tr>
+                        <tr><td>Album 5</td><td>2023</td></tr>
+                    </tbody>
+                </table>
+
+                <p><a href="#top">Go to index</a></p>
+            </article>
+        </section>
+
+        <section id="artist2">
+            <article>
+                <h2>Artist B</h2>
+                <p>Information about <span class="highlight">Artist B</span>...</p>
+                <div class="details">
+                    <p>Collaborations:</p>
+                    <ul>
+                        <li>Collaboration with Artist X</li>
+                        <li>Collaboration with Artist Y</li>
+                        <li>Collaboration with Artist Z</li>
+                    </ul>
+                    <span class="extra-info">Awards and recognitions.</span>
+                </div>
+
+                <!-- Video element with controls, loop ,poster, and width set to 25% -->
+                <video width="25%" loop muted controls poster="img/KarolG.jpg"  preload="auto">
+                    <source src="media/video/cantante2.mp4#t=10,15" type="video/mp4">
+                    Su navegador no soporta el elemento de video.
+                </video>
+
+
+                <p><a href="#top">Go to index</a></p>
+            </article>
+        </section>
+
+        <section id="artist3">
+            <article>
+                <h2>Artist C</h2>
+                <p>Information about <span class="highlight">Artist C</span>...</p>
+                <div class="details">
+                    <p>Upcoming exhibitions:</p>
+                    <ol>
+                        <li>Place 1 - Date</li>
+                        <li>Place 2 - Date</li>
+                    </ol>
+                    <span class="extra-info">Artistic influences.</span>
+                </div>
+                <!-- Para añadir video de youtube- incrustarlo con un <iframe> -->
+                <!-- Se añade copiando el codigo de inserción del video. Video original = https://youtu.be/0xyw0EM9zuM-->
+                    <iframe width="50%" height="350" src="https://www.youtube.com/embed/0xyw0EM9zuM" 
+                    title="DJ Suzy — Aqua (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>                
+                    </iframe>
+                <p><a href="#top">Go to index</a></p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Interesting Links</h3>
+            <ul>
+                <li><a href="#">Official website</a></li>
+                <li><a href="#">Online gallery</a></li>
+                <li><a href="#">Social media</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Artists Page</p>
+    </footer>
+</body>
+</html>
