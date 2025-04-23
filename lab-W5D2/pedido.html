@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Pizza</title>
+    <link rel="stylesheet" href="pedido.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="img/logoPizza.jpg" alt="logo empresa" class="foto-logo">
+        <h1>Pide tu pizza desde el formulario!!!</h1>
+    </header>
+
+
+    <form action="confirmacion_pedido.html" method="get"  id="pedidoForm">
+        <fieldset>
+            <legend>Información Personal</legend>
+            <div>
+                <label for="tratamiento">Tratamiento:</label>
+                <select id="tratamiento" name="tratamiento">
+                    <option value="Sr">Sr.</option>
+                    <option value="Sra">Sra.</option>
+                    <option value="Otro">Otro (Indicar nombre)</option>
+                </select>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detalles de la Pizza</legend>
+            <div>
+                <label for="tipo_pizza">Tipo de Pizza:</label>
+                <select id="tipo_pizza" name="tipo_pizza" required>
+                    <option value="">Seleccionar Pizza</option>
+                    <option value="margarita">Margarita</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="napolitana">Napolitana</option>
+                    <option value="barbacoa">Barbacoa</option>
+                    <option value="cuatro_quesos">Cuatro Quesos</option>
+                    <option value="carbonara">Carbonara</option>
+                </select>
+            </div>
+            <div>
+                <label>Ingredientes Extras:</label><br>
+                <input type="checkbox" id="extra_aceitunas" name="extra_aceitunas" value="aceitunas">
+                <label for="extra_aceitunas">Aceitunas</label><br>
+                <input type="checkbox" id="extra_cebolla" name="extra_cebolla" value="cebolla">
+                <label for="extra_cebolla">Cebolla</label><br>
+                <input type="checkbox" id="extra_pimiento" name="extra_pimiento" value="pimiento">
+                <label for="extra_pimiento">Pimiento</label><br>
+                <input type="checkbox" id="extra_champinones" name="extra_champinones" value="champinones">
+                <label for="extra_champinones">Champiñones</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Entrega</legend>
+            <div>
+                <input type="radio" id="enviar" name="entrega" value="enviar" checked>
+                <label for="enviar">Enviar a casa</label>
+            </div>
+            <div>
+                <input type="radio" id="recoger" name="entrega" value="recoger">
+                <label for="recoger">Venir a buscar</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="comentario">Comentarios Adicionales:</label><br>
+            <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+        </div>
+
+        <button type="submit">Realizar Pedido</button>
+    </form>
+</body>
+</html>

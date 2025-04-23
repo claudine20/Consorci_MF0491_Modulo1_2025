@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Recibido</title>
+</head>
+<body>
+    <h1>¡Pedido Recibido!</h1>
+    <p>Gracias por tu pedido. Hemos recibido la siguiente información:</p>
+    <p id="datos_pedido"></p>
+    <script>
+        const datosPedido = document.getElementById('datos_pedido');
+        const parametros = new URLSearchParams(window.location.search);
+        let mensaje = "";
+        for (const [clave, valor] of parametros.entries()) {
+            mensaje += `${clave}: ${valor}<br>`;
+        }
+        datosPedido.innerHTML = mensaje;
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ebf0f3;
+    background-image: url('pizza_background.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.foto-logo {
+    /* width: 80px; */
+    width: 5%;
+    height: 10%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+header {
+    background-color: #d68387;
+    color: white;
+    padding: 5px 10px;
+    /* padding: 10px 0; Reducimos el padding vertical */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 100px; /* Altura máxima del header */
+    /* position: fixed; Fijar el header en la parte superior */
+    
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%;
+}
+
+fieldset {
+    border: 2px solid #242323;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('arrow_down.png'); /* Reemplaza con un icono de flecha */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    padding-right: 30px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #d32f2f; /* Rojo oscuro (color de pizza) */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b71c1c;
+}
+
+/* Estilos específicos para el tratamiento y nombre */
+#nombre_otre {
+    display: none; /* Ocultar inicialmente */
+    margin-left: 10px;
+    width: calc(50% - 22px);
+}
+
+#tratamiento:valid ~ #nombre_otre {
+    display: inline-block; /* Mostrar si "Otre" está seleccionado */
+}
