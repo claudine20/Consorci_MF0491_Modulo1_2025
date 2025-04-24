@@ -1,0 +1,72 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .ad-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: moveCars 10s linear infinite;
+  }
+  
+  @keyframes moveCars {
+    0% { transform: translateX(-10%); }
+    100% { transform: translateX(10%); }
+  }
+  
+  .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeInLogo 3s ease-in-out;
+  }
+  
+  @keyframes fadeInLogo {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .slogan {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: slideInSlogan 3s ease-out;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes slideInSlogan {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: auto;
+    margin-top: 2rem;
+    animation: bounceLogo 2s infinite;
+    animation-delay: 4s;
+  }
+  
+  @keyframes bounceLogo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
