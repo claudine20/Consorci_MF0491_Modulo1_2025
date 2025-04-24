@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Ampliado</title>
+    <link rel="stylesheet" href="formulario_ampliado.css">
+</head>
+<body>
+    <header>
+        <img src="img/logoPizza.jpg" alt="logo empresa" class="foto-logo">
+        <h1>¡Realiza tu Pedido de Pizza Personalizado!</h1>
+    </header>
+    
+    <form action="https://formsubmit.co/ff6c41ca9ee884974a275a9f795771b9" method="POST">
+        <fieldset>
+            <legend>Información Personal</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detalles de tu Pizza</legend>
+            <div>
+                <label for="tipo_pizza">Tipo de Pizza:</label>
+                <select id="tipo_pizza" name="tipo_pizza" required>
+                    <option value="">Seleccionar Pizza</option>
+                    <option value="margarita">Margarita</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="napolitana">Napolitana</option>
+                    <option value="barbacoa">Barbacoa</option>
+                    <option value="cuatro_quesos">Cuatro Quesos</option>
+                    <option value="carbonara">Carbonara</option>
+                </select>
+            </div>
+            <div>
+                <label>Ingredientes Extras:</label><br>
+                <input type="checkbox" id="extra_aceitunas" name="extra_aceitunas" value="aceitunas">
+                <label for="extra_aceitunas">Aceitunas</label><br>
+                <input type="checkbox" id="extra_cebolla" name="extra_cebolla" value="cebolla">
+                <label for="extra_cebolla">Cebolla</label><br>
+                <input type="checkbox" id="extra_pimiento" name="extra_pimiento" value="pimiento" checked>
+                <label for="extra_pimiento">Pimiento (Seleccionado)</label><br>
+                <input type="checkbox" id="extra_champinones" name="extra_champinones" value="champinones">
+                <label for="extra_champinones">Champiñones</label>
+            </div>
+            <div>
+                <label>Tamaño:</label><br>
+                <input type="radio" id="tamano_pequena" name="tamano" value="pequena">
+                <label for="tamano_pequena">Pequeña</label><br>
+                <input type="radio" id="tamano_mediana" name="tamano" value="mediana" checked>
+                <label for="tamano_mediana">Mediana (Seleccionada)</label><br>
+                <input type="radio" id="tamano_grande" name="tamano" value="grande">
+                <label for="tamano_grande">Grande</label>
+            </div>
+            <div>
+                <label for="comentario">Comentarios Adicionales:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+            </div>
+        </fieldset>
+
+        <input type="hidden" name="_next" value="pedido_confirmado.html"> <button type="submit">Realizar Pedido</button>
+        
+    </form>
+
+    <footer>
+        <p>© 2025 Mi Pizzería Online</p>
+    </footer>
+</body>
+</html>
