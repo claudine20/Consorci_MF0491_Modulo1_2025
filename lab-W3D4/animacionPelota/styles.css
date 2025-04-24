@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinear elementos en la parte inferior de la ventana gráfica */
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    /* Posición relativa para permitir el posicionamiento absoluto de la bola */
+    position: relative;
+}
+
+#ball {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0; /* Empezar desde abajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    animation: bounce 1.5s infinite alternate; /* Nombre, duración, repetición, dirección */
+    transform-origin: center bottom; /* Important para escalar desde la parte inferior */
+}
+
+
+/* Animación sin distorsión */
+/* @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}  */
+
+
+/* Opcional: Animación con distorsión al tocar el suelo */
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scaleY(1);
+    }
+    40% {
+        transform: translateY(-150px) scaleY(1);
+    }
+    70% {
+        transform: translateY(-150px) scaleY(1); /* Mantener la altura en el punto álgido */
+    }
+    90% {
+        transform: translateY(0) scaleY(0.8); /* Aplastamiento al tocar el suelo */
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
