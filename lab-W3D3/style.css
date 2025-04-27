@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px */
+    grid-gap: 20px; /* Espacio entre las bombas */
+}
+
+.bomba {
+    width: 100px;
+    height: 100px;
+    background-image: url('img/bomba.jpg'); 
+    background-size: cover;
+    cursor: pointer;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.bomba:hover {
+    background-image: url('img/explosion.gif'); /* que se vea la explosión al pasar el mouse */
+}
+
+.seguro:hover {
+    background-image: url('img/extintor.jpg'); /* que se vea el extintor al pasar el mouse */
+    background-color: rgb(202, 18, 49); /* color de fondo para el hover */
+
+    transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out; /* transición suave */
+}
+
+
+/*
+EXTRA (Mostrar/Ocultar con CSS - Limitado a :hover)
+
+Podríamos intentar mostrar algo al hacer hover sobre la bomba segura,
+pero es muy limitado y no permite un mensaje que persista después del hover.
+
+Por lo tanto, se opta por un mensaje que aparece al hacer hover sobre la bomba segura,
+y desaparece al quitar el hover.
+*/
+
+/* CSS para el mensaje que aparece al hacer hover sobre la bomba segura */
+
+#mensaje-seguro {
+    position: absolute;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10; 
+    top: 110px; 
+}
+
+.seguro:hover + #mensaje-seguro {
+    opacity: 1; /* Mostrar el mensaje al hacer hover*/
+    /*pointer-events: none; /* Evitar que el hover se active al pasar el mouse sobre el mensaje */
+}
