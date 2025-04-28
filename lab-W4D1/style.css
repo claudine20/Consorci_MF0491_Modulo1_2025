@@ -1,0 +1,122 @@
+
+/* Estilos generales (Mobile First) */
+
+/* Bloque 1: Preparar la estructura principal porque queremos ordenar verticalmente: content arriba + footer abajo*/
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  /*Bloque 2: Estilos del contenedor del contenido principal*/
+  
+  .content {
+    flex: 1; /* Esto permite que el contenido principal ocupe todo el espacio disponible entre el header y el footer */
+    display: flex;
+    flex-direction: column; /* organizando los hijos (header y gallery) en vertical. */
+  }
+
+
+  /* Bloque 3: Header*/
+  
+  header {
+    text-align: center; /* centra el texto del header (título y descripción) */
+    padding: 20px; /* espacio interno alrededor del contenido */
+    background-color: #222; /* color de fondo oscuro para el header */
+    color: #fff; /* color del texto blanco para buen contraste */
+  }
+  
+
+  /* Bloque 4: Estilos de textos generales*/
+  h1 { /* tamaño grande para el título principal.*/
+    font-size: 24px;
+  }
+  
+  p { /* tamaño de fuente más pequeño para la descripción; tamaño de párrafo estándar y separación hacia arriba (margin-top).*/
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Bloque 5: Galería de posters*/
+  /* display: flex + flex-direction: column: organiza los posters uno debajo de otro (en móvil). */
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra los posters horizontalmente */
+    padding: 20px; /*  espacio interior */
+    gap: 20px;/* espacio entre cada poster */
+  }
+
+  
+  /* Bloque 6: Estilos de cada poster*/
+  .poster {
+    background: #fff;/* fondo blanco para cada poster */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px; /* ancho máximo para cada poster */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* pequeña sombra para dar efecto de elevación */
+    text-align: center; /* centra el contenido de cada poster */
+  }
+  
+
+
+  /* Bloque 7: Estilos de las imágenes dentro de los posters*/
+  .poster img {
+    width: 100%; /* la imagen ocupará el 100% del ancho de su contenedor .poster */
+    height: 400px; /* Altura fija para las imágenes; Todas las imágenes tendrán la misma altura */
+    object-fit: cover; /* Hace que la imagen se recorte de manera elegante para llenar el espacio sin deformarse. (No se estira ni aplasta.)*/
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+  }
+  
+  /* Bloque 8: Se oculta la información para que solo se muestre en pantallas grandes*/
+  .desktop-only {
+    display: none; /* Oculto por defecto en móvil */
+
+}
+
+  /* Bloque 9: Footer*/
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+
+/* Bloque 10: Estilos para escritorio (Desktop)*/
+/* A partir de pantallas mayores a 1200px 
+- gallery cambia a una fila horizontal (flex-direction: row) y permite que los posters bajen (flex-wrap: wrap) si no caben.
+- Centra la galería (justify-content: center).
+- Los posters son un poco más pequeños (max-width: 250px).
+- El título h1 se hace más grande para que se vea mejor en pantallas grandes. 
+- El color de fondo de la galería cambia a un color diferente (rgb(176, 233, 233))
+- Se muestra una tarjeta adicional para los anuncios */
+
+
+  @media (min-width: 1200px) {/* A partir de pantallas mayores a 1200px */
+    .gallery {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: rgb(176, 233, 233);
+    }
+  
+    .poster {
+      max-width: 250px;
+    }
+
+    .desktop-only {
+        display: block; /* Mostrar en desktop */
+    }
+  
+    h1 {
+      font-size: 36px;
+    }
+  }
+  
+  
