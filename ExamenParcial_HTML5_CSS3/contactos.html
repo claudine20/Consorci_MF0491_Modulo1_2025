@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claudia Flowers - Contacto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header id="top">
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo Empresa" />
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+          </ul>
+        </nav>
+        <div class="company-name">
+          <h1>Claudia Flowers</h1>
+        </div>
+      </header>
+
+  <main>
+    <h2>Contáctanos</h2>
+    <br>
+    <p>Si tienes alguna pregunta o necesitas más información sobre nuestros servicios, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+    <br>
+    <p>Para más información, puedes rellenar el siguiente formulario y pronto nos comunicaremos contigo:</p>
+    <form action="contactos.html" method="GET" name="contactForm" id="contactForm" autocomplete="off">
+      <label for="Nombre">Nombre:<input id="Nombre" name="Nombre" type="text" required></label>
+      <label for="Apellidos">Apellidos:<input input id="Apellidos" name="Apellidos" type="text" required></label>
+      <label for="email">Email:<input id="email" name="email" type="email" required></label>
+      <label for="telefono">Teléfono:<input id="telefono" name="telefono" type="tel"></label>
+      <label for="Asunto">Asunto:<input id="Asunto" name="Asunto" type="text" required></label>
+      <!-- <label for="mensaje">Mensaje:<textarea rows="4" required></textarea></label> -->
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" cols="60" rows="10"></textarea>
+      <div class="terminos">
+        <input type="checkbox" id="aceptar" name="aceptar" required>
+        <label for="aceptar">
+          He leído y acepto los <a href="#">términos y condiciones de uso</a>
+        </label>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Contacto: contacto@claudiaflowers.com | Tel: 555-123-456</p>
+    <p><a href="#top" style="color:white;">Volver arriba</a></p>
+  </footer>
+  <p> All rights reserved 2025 ©Claudia Flowers</p>
+
+</body>
+</html>

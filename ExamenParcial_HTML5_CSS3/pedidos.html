@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claudia Flowers - Pedidos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header id="top">
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo Empresa" />
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+          </ul>
+        </nav>
+        <div class="company-name">
+          <h1>Claudia Flowers</h1>
+        </div>
+      </header>
+
+  <main>
+    <h2>Realiza tu pedido</h2>
+    <p>Completa el siguiente formulario para solicitar un presupuesto personalizado.</p>
+    <form action="pedidos.html" method="GET" name="orderForm" id="orderForm" autocomplete="off">
+      <label for="Nombre">Nombre de la empresa:<input id="Nombre" name="Nombre" type="text" required></label>
+      <label for="telefono">Teléfono:<input id="telefono" name="telefono" type="tel"></label>
+      <label  for="email">Email:<input id="email" name="email" type="email" required></label>
+      <label for="Tipo de pedido">Tipo de pedido:
+        <select  id= "tipo_pedido" name= "tipo_pedido" required>
+          <option>Jardín para eventos</option>
+          <option>Decoración de iglesias</option>
+          <option>Ramos personalizados</option>
+        </select>
+      </label>
+      <label for="Color">Color preferido:<input id="Color" name="Color" type="color"></label>
+      <label for="Presupuesto">Presupuesto (€):<input id="Presupuesto" name="Presupuesto" type="number" min="0"></label>
+      <label for="Observaciones">Observaciones:<textarea id="Observaciones" name="Observaciones" cols="60" rows="15"></textarea></label>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpiar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Contacto: contacto@claudiaflowers.com | Tel: 555-123-456</p>
+    <p><a href="#top" style="color:white;">Volver arriba</a></p>
+  </footer>
+  <p> All rights reserved 2025 ©Claudia Flowers</p>
+
+</body>
+</html>

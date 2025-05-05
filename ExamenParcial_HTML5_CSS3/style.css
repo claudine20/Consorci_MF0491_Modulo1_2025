@@ -1,0 +1,192 @@
+/* Reset básico 
+Se usa reset porque los navegadores aplican estilos por defecto diferentes, y esto:Elimina inconsistencias, da una base limpia para diseñar, Mejora la compatibilidad entre dispositivos y navegadores.*/
+* {
+    box-sizing: border-box; /* Cambia el modelo de caja para que el padding y el border no sumen al ancho total del elemento. Esto hace que sea más fácil controlar el tamaño de los elementos. */
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina los rellenos internos (espacios interiores) por defecto que tienen algunos elementos. */
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Cabecera */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 2em;
+  }
+  
+  /* Logo de la empresa */
+  .logo img { /* Selecciona la imagen dentro de un elemento con clase logo */
+    height: 120px;
+
+  }
+
+  /* Navegación */
+  .nav {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 1.5em;
+    padding: 0;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Nombre de la empresa */
+  .company-name {
+    text-align: right;
+    min-width: 100px;
+    font-size: 1.0em;
+    font-weight: bold;
+
+  }
+  
+  /* Secciones */
+  section {
+    padding: 2em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* ¿Quiénes somos? */
+  .somos .bloque {
+    margin-bottom: 1.5em;
+  }
+  
+  /* Proyectos */
+  .proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+  
+  .proyecto img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-right: 1em;
+    border-radius: 8px;
+  }
+  
+  .proyecto div {
+    flex: 1;
+  }
+  
+  /* Formularios */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  input, select, textarea, button {
+    padding: 0.7em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .terminos { /* Estilos para la sección de términos y condiciones */
+    margin: 1em 0;
+    font-size: 0.95em;
+  }
+  
+  .terminos label {/* Estilos para la etiqueta de términos y condiciones */
+    margin-left: 0.5em;
+  }
+
+  .textarea{ /* Estilos  para el campo de texto */
+    width: 100%; 
+    background-color: rgb(239, 251, 255);
+    color: black;
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgb(136, 136, 136);
+
+    field-sizing: content; /* Ajusta el tamaño del campo de texto al contenido */
+    resize: none;
+}
+  
+
+  /* Pie de página */
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: underline;
+  }
+
+
+  
+  
+  
+/*********** Media Queries para Responsive Design ***********/
+
+/*Aplica lo que está aquí solo si el ancho de la pantalla es 768px o menos*/
+/* Esto es útil para dispositivos móviles y tablets. */
+/* En este caso, se aplican estilos específicos para pantallas pequeñas. */
+
+  @media (max-width: 768px) {  /* Estilos para móviles y tablets */
+    header { /* La regla se aplica a la cabecera */
+      flex-direction: column; /* La cabecera se apila en vertical*/
+      text-align: center; /* Alinea el texto al centro */
+    }
+  
+    .nav ul { /* la regla .nav ul no se aplica a todos los elementos <ul> del navegador, solo a los que están dentro de un elemento con la clase nav */
+      flex-direction: column;  /*Cambia la dirección de los elementos del menú a horizontal */
+      justify-content: center; /* Centra los elementos del menú */
+      gap: 1em; /* Agrega un espacio vertical entre cada elemento del menú. */
+    }
+  
+    .proyecto { /* Aplica la regla a todos los elementos con clase .proyecto */
+      flex-direction: column;
+    }
+  
+    .proyecto img { /*Selecciona todas las imágenes (<img>) que estén dentro de un contenedor con clase .proyecto */
+      margin-right: 0; /* Elimina cualquier espacio a la derecha de la imagen. En móviles, la imagen se coloca encima del texto (por diseño responsivo), por lo que ya no se necesita espacio a la derecha. */
+      margin-bottom: 1em; /* Agrega un espacio debajo de la imagen. Para que cdo la imagen se coloca encima del texto, no quede pegada al texto, sino que haya una separación visual cómoda.*/
+    }
+  }
+  
