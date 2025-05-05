@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+```
 Esto permite que los elementos (logo, menú, título) se alineen horizontalmente en pantallas grandes y salten en vertical si no hay espacio (como en móviles).
 
 # 2. Unidades relativas
@@ -38,6 +39,7 @@ En lugar de usar píxeles fijos, se usan unidades como %, em o rem, que se adapt
 padding: 1em;
 width: 100%;
 font-size: 1em;
+```
 
 # 3. Media Queries
 Se utilizan reglas condicionales para cambiar el diseño si el ancho de la pantalla es menor a cierto valor, como 768px (tablets y móviles):
@@ -56,6 +58,7 @@ Se usa max-width: 100% y height: auto para que las imágenes se adapten al ancho
   width: 100%;
   height: auto;
 }
+```
 
 📱 Resultado:
 - En ordenador, todo se ve en horizontal y distribuido.
