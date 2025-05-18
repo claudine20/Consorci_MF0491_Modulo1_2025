@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura de Posicionamiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Estilos CSS personalizados para controlar el posicionamiento y la apariencia */
+        body {
+            /* Fondo general opcional */
+            background-image: url('img/imagenDeFondo.jpg'); 
+            background-color: #f8f9fa; /* Un color de fondo claro para la página */
+            background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el body */
+            background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+            min-height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana */
+            margin: 0; /* Elimina los márgenes predeterminados del body */
+            padding-bottom: 60px; /* Añade un espacio en la parte inferior para que el contenido no quede oculto por el footer fixed */
+        }
+
+        /* MENU: sticky */
+        .main-nav {
+            background-color: rgba(52, 58, 64, 0.9); /* Fondo gris oscuro con un 90% de opacidad */
+            padding: 1rem 0; /* Espaciado vertical dentro de la barra de navegación */
+            position: sticky; /* Fija el elemento a la parte superior de la ventana al hacer scroll */
+            top: 0; /* La posición superior donde se fijará el menú */
+            z-index: 1000; /* Asegura que el menú esté siempre por encima de otros elementos */
+        }
+
+        .nav-link {
+            color: white !important; /* Asegura que los enlaces del menú sean blancos */
+        }
+
+        /* FOOTER: fixed */
+        .main-footer {
+            background-color: #343a40; /* Fondo gris oscuro para el footer */
+            color: white; /* Texto blanco para el footer */
+            text-align: center; /* Centra el texto dentro del footer */
+            padding: 1rem 0; /* Espaciado vertical dentro del footer */
+            position: fixed; /* Fija el elemento a una posición en la ventana del navegador */
+            bottom: 0; /* Fija el footer a la parte inferior de la ventana */
+            left: 0; /* Fija el footer al lado izquierdo de la ventana */
+            width: 100%; /* Asegura que el footer ocupe todo el ancho de la ventana */
+            z-index: 999; /* Asegura que el footer esté por encima del contenido principal */
+        }
+
+        /* SLOGAN: absolute */
+        .main-slogan {
+            background-color: rgba(255, 193, 7, 0.8); /* Fondo amarillo con un 80% de opacidad */
+            color: black; /* Texto negro para el slogan */
+            padding: 15px; /* Espaciado alrededor del texto del slogan */
+            border-radius: 5px; /* Bordes ligeramente redondeados */
+            position: absolute; /* Saca el elemento del flujo normal y lo posiciona respecto a su ancestro posicionado (body en este caso) */
+            top: 50%; /* Lo coloca al 50% de la parte superior del contenedor */
+            left: 50%; /* Lo coloca al 50% del lado izquierdo del contenedor */
+            transform: translate(-50%, -50%); /* Centra el elemento exactamente en el medio */
+            z-index: 10; /* Asegura que el slogan esté por encima del elemento de fondo */
+        }
+
+        /* ELEMENTO(s) UBICADO(s) EN EL FONDO: relative */
+        .background-element {
+            position: relative; /* Permite desplazar el elemento respecto a su posición normal sin sacarlo del flujo */
+            bottom: 20px; /* Lo desplaza 20px hacia abajo desde su posición normal */
+            right: 30px; /* Lo desplaza 30px hacia la derecha desde su posición normal */
+            opacity: 0.6; /* Reduce la opacidad para que parezca estar en segundo plano */
+            z-index: 1; /* Asegura que esté detrás del slogan y otros elementos superpuestos */
+        }
+
+        .astronaut {
+            width: 150px; /* Define el ancho de la imagen del astronauta */
+            height: auto; /* Mantiene la proporción de la altura automáticamente */
+        }
+
+        /* ELEMENTO(s) SUPERPUESTOS */
+        .overlay-element-1 {
+            background-color: rgba(0, 123, 255, 0.7); /* Fondo azul con un 70% de opacidad */
+            color: white; /* Texto blanco */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 50%; /* Lo convierte en un círculo */
+            width: 100px; /* Ancho del círculo */
+            height: 100px; /* Alto del círculo */
+            text-align: center; /* Centra el texto horizontalmente */
+            line-height: 60px; /* Centra verticalmente el icono (aproximadamente) */
+            position: absolute; /* Posicionamiento absoluto */
+            top: 30%; /* A 30% de la parte superior */
+            left: 20%; /* A 20% del lado izquierdo */
+            z-index: 5; /* Un nivel de superposición */
+        }
+
+        .overlay-element-2 {
+            background-color: rgba(220, 53, 69, 0.7); /* Fondo rojo con un 70% de opacidad */
+            color: white; /* Texto blanco */
+            padding: 15px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            position: absolute; /* Posicionamiento absoluto */
+            bottom: 40%; /* A 40% desde la parte inferior */
+            right: 15%; /* A 15% desde el lado derecho */
+            z-index: 8; /* Un nivel de superposición mayor que el azul */
+        }
+
+        /* EXTRA: Posicionamiento con Bootstrap */
+        .bootstrap-relative {
+            position: relative; /* Posicionamiento relativo usando la clase de Bootstrap */
+            bottom: 50px; /* Desplazamiento hacia abajo */
+            start: 50px; /* Desplazamiento desde el inicio (izquierda en LTR) */
+            background-color: lightgreen; /* Fondo verde claro para visualizar */
+            padding: 10px; /* Espaciado interno */
+        }
+
+        .bootstrap-absolute {
+            position: absolute; /* Posicionamiento absoluto usando la clase de Bootstrap */
+            top: 10px; /* A 10px desde la parte superior de su ancestro posicionado */
+            end: 10px; /* A 10px desde el final (derecha en LTR) de su ancestro posicionado */
+            background-color: lightcoral; /* Fondo rojo claro para visualizar */
+            padding: 10px; /* Espaciado interno */
+            z-index: 2; /* Un z-index dentro del rango de Bootstrap */
+        }
+
+        .parent-relative {
+            position: relative; /* Necesario para que el elemento con .bootstrap-absolute se posicione dentro de este div */
+            height: 300px; /* Altura para visualizar el efecto del posicionamiento absoluto */
+            background-color: #eee; /* Fondo gris claro */
+            margin-top: 2rem; /* Margen superior para separar del contenido anterior */
+        }
+
+        .containerText{
+        border: 2px solid rgb(16, 16, 17);
+        color: black;
+        width: auto;
+        height: auto;
+        margin: 20px;
+        }
+
+        .containerText2{
+        border: 2px solid rgb(16, 16, 17);
+        color: #eee;
+        width: auto;
+        height: auto;
+        margin: 20px;
+        }
+
+        .containerText2 h2{
+            color: #000;
+        }
+
+    </style>
+
+    <!-- Estructura HTML-->
+</head>
+<body>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark main-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aventura Espacial</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Misiones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="bi bi-rocket-fill"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Slogan-->
+    <div class="main-slogan">
+        ¡Un pequeño paso para el hombre, un salto gigante para la creatividad!
+    </div>
+
+    <div class="background-element">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Little_Astronaut.svg/800px-Little_Astronaut.svg.png" alt="Astronauta" class="astronaut">
+    </div>
+
+    <div class="overlay-element-1">
+        <i class="bi bi-star-fill" style="font-size: 2em;"></i>
+    </div>
+
+    <div class="overlay-element-2">
+        ¡Boo!
+    </div>
+
+    <div class="container mt-5">
+        <div class="parent-relative">
+            <div class="bootstrap-relative">Soy relative (Bootstrap)</div>
+            <div class="bootstrap-absolute">Soy absolute (Bootstrap)</div>
+        </div>
+    </div>
+
+    <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+    <div class="containerText">
+        <h2>Explorando el Espacio</h2>
+        <p>
+            Bienvenido a nuestra aventura espacial. Aquí exploraremos los misterios del universo y aprenderemos sobre las maravillas del espacio exterior.
+        </p>
+        <p>
+            ¡Prepárate para despegar!
+        </p>
+    </div>
+    <br> <br> <br> 
+
+
+    <div class="containerText">
+        <h2>¿Qué es el Posicionamiento?</h2>
+        
+        <p>
+            El posicionamiento es una técnica de diseño web que permite colocar elementos en la página de manera precisa. Existen diferentes tipos de posicionamiento: estático, relativo, absoluto y fijo.
+        </p>
+        <p>
+            Cada tipo tiene sus propias características y usos. ¡Aprendamos más sobre ellos!
+        </p>
+        <ul>
+            <li>Posicionamiento Estático: es el valor por defecto. Los elementos se colocan en el flujo normal del documento.</li>
+            <li>Posicionamiento Relativo: permite desplazar un elemento desde su posición original sin sacarlo del flujo normal.</li>
+            <li>Posicionamiento Absoluto: saca el elemento del flujo normal y lo coloca en relación a su ancestro posicionado más cercano.</li>
+            <li>Posicionamiento Fijo: mantiene el elemento en una posición específica en la ventana del navegador, incluso al hacer scroll.</li>
+            <li>Posicionamiento Sticky: es una combinación de relativo y fijo. El elemento se comporta como relativo hasta que alcanza un cierto punto en el viewport, luego se comporta como fijo.</li>
+        </ul>
+    </div> 
+    <div class="containerText2">
+        <h2>¿Cómo se utiliza el Posicionamiento?</h2>
+        <p>
+            Para utilizar el posicionamiento, se debe establecer la propiedad CSS <code>position</code> en el elemento deseado. Luego, se pueden usar propiedades adicionales como <code>top</code>, <code>left</code>, <code>right</code> y <code>bottom</code> para ajustar la ubicación del elemento.
+        </p>
+        <p>
+            Por ejemplo, para posicionar un elemento en la parte superior de la página, se puede usar <code>position: fixed</code> junto con <code>top: 0</code>.
+        </p>
+        <p>
+            Para centrar un elemento en la pantalla, se puede usar <code>position: absolute</code> junto con <code>top: 50%</code> y <code>left: 50%</code>, y luego aplicar una transformación para centrarlo completamente.
+        </p>
+        <p>
+            Para posicionar un elemento en relación a su contenedor, se puede usar <code>position: relative</code> y luego ajustar su posición con <code>top</code>, <code>left</code>, <code>right</code> o <code>bottom</code>.
+        </p>
+        <p>
+            Para posicionar un elemento en relación a la ventana del navegador, se puede usar <code>position: fixed</code> y luego ajustar su posición con <code>top</code>, <code>left</code>, <code>right</code> o <code>bottom</code>.
+        </p>
+        <p>
+            Para posicionar un elemento en relación a su ancestro posicionado más cercano, se puede usar <code>position: absolute</code> y luego ajustar su posición con <code>top</code>, <code>left</code>, <code>right</code> o <code>bottom</code>.
+        </p>
+        <p>
+            El posicionamiento también se puede combinar con otras propiedades CSS, como <code>display</code>, <code>float</code> y <code>clear</code>, para lograr un diseño más complejo.
+        </p>
+        <p>
+            Por ejemplo, se puede usar <code>display: flex</code> junto con <code>position: absolute</code> para crear un diseño flexible y responsivo.
+        </p>
+        <p>
+            También se pueden usar propiedades como <code>margin</code> y <code>padding</code> para ajustar el espaciado entre los elementos.
+        </p>
+        <p>
+            El uso de <code>transform</code> permite aplicar transformaciones como rotación, escalado y traslación a los elementos. Esto puede ser útil para crear efectos visuales interesantes.
+        </p>
+        <p>
+            El uso de <code>transition</code> permite crear animaciones suaves al cambiar las propiedades CSS de un elemento. Esto puede ser útil para crear efectos de desplazamiento y transformación.
+        </p>
+        <p>
+            El uso de <code>animation</code> permite crear animaciones complejas utilizando keyframes. Esto puede ser útil para crear efectos visuales dinámicos y atractivos.
+        </p>
+        <p>
+            El uso de <code>media queries</code> permite aplicar estilos CSS específicos según el tamaño de la pantalla. Esto es útil para crear diseños responsivos que se adapten a diferentes dispositivos.
+        </p>
+        <p>
+            El uso de <code>calc()</code> permite realizar cálculos matemáticos en CSS. Esto puede ser útil para ajustar el tamaño y la posición de los elementos de manera dinámica.
+        </p>
+        <p>
+            El uso de <code>vh</code> y <code>vw</code> permite definir tamaños y posiciones en relación al tamaño de la ventana del navegador. Esto es útil para crear diseños responsivos que se adapten a diferentes dispositivos.
+        </p>
+        <p>
+            El uso de <code>overflow</code> permite controlar cómo se comporta el contenido que excede el tamaño de su contenedor. Esto es útil para crear diseños que se adapten a diferentes tamaños de pantalla.
+        </p>
+        <p>
+            El uso de <code>visibility</code> permite controlar la visibilidad de un elemento sin afectar su posición en el flujo del documento. Esto es útil para ocultar elementos sin eliminarlos del DOM.
+        </p>
+        <p>
+            El uso de <code>opacity</code> permite controlar la opacidad de un elemento. Esto es útil para crear efectos de superposición y transparencia.
+        </p>
+        <p>
+            El uso de <code>box-shadow</code> permite agregar sombras a los elementos. Esto es útil para crear efectos de profundidad y resaltar elementos en la página.
+        </p>
+        <p>
+            El uso de <code>border-radius</code> permite redondear los bordes de los elementos. Esto es útil para crear diseños más suaves y atractivos.
+        </p>
+        <p>
+            El uso de <code>background</code> permite agregar imágenes y colores de fondo a los elementos. Esto es útil para crear diseños visualmente atractivos.
+        </p>
+        <p>
+            El uso de <code>text-shadow</code> permite agregar sombras al texto. Esto es útil para crear efectos de profundidad y resaltar el texto en la página.
+        </p>
+        <p>
+            El uso de <code>filter</code> permite aplicar efectos visuales a los elementos, como desenfoque y escala de grises. Esto es útil para crear efectos visuales interesantes.
+        </p>
+        <p>
+            El uso de <code>clip-path</code> permite crear formas personalizadas para los elementos. Esto es útil para crear diseños únicos y atractivos.
+        </p>
+        
+        <p>
+            También se pueden usar unidades de medida como <code>px</code>, <code>%</code>, <code>em</code> y <code>rem</code> para definir la posición de los elementos.
+        </p>
+        <p>
+            El uso de <code>z-index</code> permite controlar la superposición de elementos. Un elemento con un <code>z-index</code> mayor se mostrará por encima de otros con un <code>z-index</code> menor.
+        </p>
+
+        <p>
+            El uso de Bootstrap facilita el posicionamiento de elementos con clases predefinidas. Por ejemplo, <code>.position-relative</code> y <code>.position-absolute</code> permiten un control preciso sobre la ubicación de los elementos.
+        </p>
+        <p>
+            Bootstrap también ofrece clases para crear diseños responsivos y flexibles, lo que facilita la creación de páginas web adaptativas.
+        </p>
+        <p>
+            El uso de flexbox y grid también puede ayudar a organizar el contenido de manera efectiva, pero el posicionamiento sigue siendo una herramienta poderosa para diseños complejos.
+        </p>
+        <p>
+            En resumen, el posicionamiento es una herramienta esencial en el diseño web. Permite crear layouts complejos y atractivos que mejoran la experiencia del usuario.
+        </p>
+
+        <br>
+        <h2>Conclusión</h2>
+        <p>
+            En conclusión, el posicionamiento es una técnica fundamental en el diseño web que permite colocar elementos de manera precisa y controlada. Conocer los diferentes tipos de posicionamiento y cómo aplicarlos es esencial para crear diseños atractivos y funcionales.
+        </p>
+        <p>
+            A lo largo de este tutorial, hemos explorado los conceptos básicos del posicionamiento en CSS, así como algunas técnicas avanzadas para mejorar la presentación de tus páginas web.
+        </p>
+        <p>
+            Recuerda que el uso adecuado del posicionamiento puede marcar la diferencia entre un diseño web ordinario y uno excepcional. No dudes en experimentar con diferentes combinaciones de propiedades CSS para lograr el efecto deseado.
+        </p>
+        <p>
+            ¡No dudes en experimentar con diferentes tipos de posicionamiento para ver cómo afectan el diseño de tu página!
+        </p>
+        <p>
+            ¡Explora y experimenta con estos conceptos para crear diseños web impresionantes!
+        </p>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Explorando el Espacio con Posicionamiento</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
