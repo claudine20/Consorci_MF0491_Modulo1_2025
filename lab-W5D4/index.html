@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Programadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        /* Estilos CSS personalizados para el espaciado y visualización del formulario.
+           Estos estilos complementan y, en algunos casos, sobrescriben los estilos de Bootstrap
+           para lograr el diseño deseado. */
+        body {
+            background-color: #f8f9fa; /* Establece un color de fondo gris claro para toda la página. */
+            padding-top: 30px; /* Añade un espacio de 30px en la parte superior del cuerpo. */
+            padding-bottom: 30px; /* Añade un espacio de 30px en la parte inferior del cuerpo. */
+        }
+        .form-container {
+            max-width: 800px; /* Establece un ancho máximo para el contenedor del formulario. */
+            margin: 0 auto; /* Centra el contenedor del formulario horizontalmente en la página. */
+            padding: 30px; /* Añade un espacio interno de 30px dentro del contenedor. */
+            background-color: #ffffff; /* Establece un fondo blanco para el formulario. */
+            border-radius: 8px; /* Redondea las esquinas del contenedor del formulario. */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave al contenedor para darle profundidad. */
+        }
+        h2 {
+            margin-bottom: 1.5rem; /* Añade un margen inferior de 1.5 unidades de medida (rem). */
+            color: #007bff; /* Establece el color del título a azul (color primario de Bootstrap). */
+            text-align: center; /* Centra el texto del título. */
+        }
+        .form-label {
+            font-weight: bold; /* Hace que el texto de las etiquetas del formulario sea negrita. */
+        }
+        .form-check {
+            margin-bottom: 0.5rem; /* Añade un margen inferior a cada checkbox/radio button para espaciarlos. */
+        }
+        .form-check-inline {
+            margin-right: 1.5rem; /* Añade un margen derecho a los checkboxes/radios dispuestos en línea para separarlos. */
+        }
+        .btn-primary {
+            width: 100%; /* Hace que el botón de enviar ocupe todo el ancho disponible de su contenedor. */
+            padding: 10px; /* Añade un relleno interno de 10px al botón. */
+            font-size: 1.1rem; /* Aumenta el tamaño de la fuente del texto del botón. */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <h2 class="mb-4">Formulario de Registro de Programadores</h2>
+            <p class="text-muted text-center mb-4">¡Bienvenido a la empresa! Por favor, rellena tus datos para comenzar.</p>
+
+            <form action="#" method="get">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label">Apellido:</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej: +34 600123456">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email:</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="tu_correo@ejemplo.com" aria-describedby="basic-addon1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="oficina" class="form-label">Oficina de trabajo preferida:</label>
+                    <select class="form-select" id="oficina" name="oficina" required>
+                        <option selected disabled value="">Selecciona una opción...</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="malaga">Málaga</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label d-block">Lenguajes de programación que conoces:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkHtmlCss" name="lenguajes[]" value="html_css">
+                        <label class="form-check-label" for="checkHtmlCss">HTML/CSS</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkJavascript" name="lenguajes[]" value="javascript">
+                        <label class="form-check-label" for="checkJavascript">JavaScript</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkPython" name="lenguajes[]" value="python">
+                        <label class="form-check-label" for="checkPython">Python</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkJava" name="lenguajes[]" value="java">
+                        <label class="form-check-label" for="checkJava">Java</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkCsharp" name="lenguajes[]" value="csharp">
+                        <label class="form-check-label" for="checkCsharp">C#</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkPhp" name="lenguajes[]" value="php">
+                        <label class="form-check-label" for="checkPhp">PHP</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkRuby" name="lenguajes[]" value="ruby">
+                        <label class="form-check-label" for="checkRuby">Ruby</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkSwift" name="lenguajes[]" value="swift">
+                        <label class="form-check-label" for="checkSwift">Swift</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label d-block">Rol de desarrollo preferido:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rol" id="radioFrontend" value="frontend" required>
+                        <label class="form-check-label" for="radioFrontend">Front-end</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rol" id="radioBackend" value="backend">
+                        <label class="form-check-label" for="radioBackend">Back-end</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rol" id="radioFullstack" value="fullstack">
+                        <label class="form-check-label" for="radioFullstack">Full-stack</label>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Registrarme</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
