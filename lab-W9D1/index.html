@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios Zoo y Titanic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    button, input {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    hr {
+      border: 2px solid #0940f3;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h1>Ejercicio 1 de JavaScript: Pasajeros del Titanic </h1>
+
+  <section id="zoo">
+    <h2>1. Inventario del Zoo</h2>
+    <button onclick="manejarZoo()">Ver Inventario del Zoo</button>
+    <!-- <pre> en HTML significa "preformatted text" que muestra texto en la página respetando los saltos de línea y espacios exactamente como están escritos. -->
+    <pre id="outputZoo"></pre> <!-- Aquí se mostrará el inventario del zoo -->
+  </section>
+
+  <section id="titanic">
+    <h2>2. Lista Pasajeros Titanic</h2>
+    <button onclick="manejarTitanic()">Ver Lista de Pasajeros</button>
+    <pre id="outputTitanic"></pre>
+
+    <h3>Añadir Pasajero Manualmente</h3>
+    <input type="text" id="nuevoPasajero" placeholder="Nombre del pasajero">
+    <button onclick="agregarPasajero()">Agregar</button>
+    <pre id="listaManual"></pre>
+  </section>
+  </div>
+
+  <hr>
+
+  <div>
+    <h1>Ejercicio 2 de JavaScript: Grupos Musicales</h1>
+
+    <h2>1- Listado del Zoo a la inversa</h2>
+    <button onclick="mostrarZooInverso()">Mostrar Zoo al Revés</button>
+    <pre id="outputZooInverso"></pre>
+
+    <h2>2- Catalogo de musica</h2>
+    <button onclick="menuMusica()">Gestionar Catálogo de Música</button>
+  </div>
+
+  <!-- Vincula el archivo externo de JavaScript -->
+  <script src="scripts/script_pasajerosTitanic.js"></script>
+  <script src="scripts/script_gruposMusicales.js"></script>
+</body>
+</html>
