@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrusel de Imágenes</title>
+  <style>
+    #carrusel {
+      width: 400px;
+      height: 300px;
+      border: 2px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    #carrusel img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  /* <-- Esto asegura que la imagen completa se vea sin recortarse */
+    }
+    button {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Carrusel Manual de Imágenes</h2>
+  <div id="carrusel">
+    <img id="imagenActual" src="img/img1.jpg" alt="Carrusel">
+  </div>
+  <button id="anterior">⬅️ Anterior</button>
+  <button id="siguiente">Siguiente ➡️</button>
+
+  <script src="pagina1.js"></script>
+</body>
+</html>
