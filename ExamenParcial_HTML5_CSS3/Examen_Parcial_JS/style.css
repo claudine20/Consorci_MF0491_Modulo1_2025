@@ -1,0 +1,62 @@
+/*  Estilo para el encabezado */
+header {
+  background-color: #b6b2f0;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+/* Estilo para el cuerpo del documento */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.message {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Estilo para los botones */
+button {
+  padding: 10px 20px;        /* Tamaño interior (vertical, horizontal) */
+  font-size: 16px;           /* Tamaño de fuente */
+  border-radius: 5px;        /* Bordes redondeados */
+  background-color: #4CAF50; /* Color de fondo */
+  color: white;              /* Color del texto */
+  border: none;              /* Sin borde */
+  cursor: pointer;           /* Cambia cursor al pasar por encima */
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049; /* Color al pasar el mouse */
+}
+
+/* Estilo para  el campo de entrada (el input de adivinanza) */
+#guess-input {
+  padding: 10px 15px;       /* Más espacio interno */
+  font-size: 16px;          /* Texto más grande */
+  width: 200px;             /* Más ancho (ajustable) */
+  border-radius: 5px;       /* Bordes redondeados */
+  border: 1px solid #ccc;   /* Borde sutil */
+  margin-top: 10px;
+}

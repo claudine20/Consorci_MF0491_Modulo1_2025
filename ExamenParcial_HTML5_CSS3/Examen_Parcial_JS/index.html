@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header of the game -->
+  <header>
+    <h1>JUEGO DE ADIVINANZAS</h1>
+  </header>
+    <!-- Main content of the game -->
+  <h1>Adivina el Número que ha pensado el ordenador (1-100)</h1>
+    <h2>Instrucciones del Juego</h2>
+    <ul>
+      <li>Ingresa un número entre 1 y 100.</li>
+      <li>Tienes un máximo de 5 intentos para adivinar el número correcto.</li>
+      <li>Después de cada intento, recibirás información sobre si tu suposición fue demasiado alta, demasiado baja o correcta.</li>
+      <li>¡Si aciertas, ganas!</li>
+      <li>Si te quedas sin intentos, el juego termina.</li>
+        <li>Puedes reiniciar el juego en cualquier momento.</li>
+    </ul>
+  <!-- Form where user submits guesses -->
+  <form id="guess-form">
+    <input type="number" id="guess-input" placeholder="Enter a number" min="1" max="100" required />
+    <button type="submit">Submit Guess</button>
+  </form>
+
+  <!-- Area for displaying game messages -->
+  <div id="message" class="message"></div>
+
+  <!-- Display number of attempts -->
+  <div id="attempts">Attempts: 0</div>
+
+  <!-- List of previous guesses -->
+  <div>
+    <h3>Guess History</h3>
+    <ul id="guess-history"></ul>
+  </div>
+
+  <!-- Reset button -->
+  <button id="reset-button">Restart Game</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

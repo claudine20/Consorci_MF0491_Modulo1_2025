@@ -1,0 +1,12 @@
+.sidebar {
+    background-color: #f8f9fa; /* Un gris claro para diferenciar */
+    padding: 15px;
+}
+.article {
+    padding: 15px;
+}
+.header, .footer {
+    background-color: #b8cadb; /* Un gris claro */
+    padding: 10px;
+    text-align: center;
+}
