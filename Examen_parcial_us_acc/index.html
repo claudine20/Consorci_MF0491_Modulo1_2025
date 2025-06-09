@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala responsive -->
+  <title>Public Library</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Enlace a la hoja de estilos -->
+</head>
+<body>
+  <header>
+    <h1>San Martín Public Library</h1> <!-- Título principal -->
+    <nav role="navigation" aria-label="Main menu"> <!-- Navegación accesible -->
+      <ul>
+        <li><a href="index.html">Home</a></li> <!-- Enlace a inicio -->
+        <li><a href="contact.html">Contact</a></li> <!-- Enlace a contacto -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <article>
+        <h2>About the Library</h2> <!-- Subtítulo -->
+        <p>Our library offers a wide variety of books, magazines, and digital resources accessible to everyone.</p> <!-- Primer párrafo -->
+        <p>Access is free and adapted for people with reduced mobility.</p> <!-- Segundo párrafo -->
+        <img src="library.jpg" alt="Interior view of the library with shelves and reading tables." /> <!-- Imagen con texto alternativo -->
+      </article>
+    </section>
+
+    <section>
+      <button id="increaseText">Increase text size</button> <!-- Botón para aumentar texto -->
+      <button id="decreaseText">Decrease text size</button> <!-- Botón para disminuir texto -->
+      <label for="darkMode">
+        <input type="checkbox" id="darkMode" /> <!-- Interruptor para modo oscuro -->
+        Enable dark mode
+      </label>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="contact.html">Contact</a> | Schedule: Mon–Fri 9:00–18:00</p> <!-- Pie de página -->
+  </footer>
+
+  <script src="scripts.js"></script> <!-- Script de JavaScript -->
+</body>
+</html>

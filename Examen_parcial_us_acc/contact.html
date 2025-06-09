@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala responsive -->
+  <title>Contact - Public Library</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Enlace a la hoja de estilos -->
+</head>
+<body>
+  <header>
+    <h1>Contact</h1> <!-- Encabezado principal -->
+    <nav role="navigation" aria-label="Main menu"> <!-- Navegación accesible -->
+      <ul>
+        <li><a href="index.html">Home</a></li> <!-- Enlace a inicio -->
+        <li><a href="contact.html">Contact</a></li> <!-- Enlace a contacto -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="contactForm" novalidate> <!-- Formulario accesible -->
+      <label for="nameInput">Name:</label> <!-- Etiqueta para el campo nombre -->
+      <input type="text" id="nameInput" name="name" required aria-required="true" /> <!-- Campo nombre -->
+      <span class="error" id="error-name" aria-live="polite"></span> <!-- Mensaje de error nombre -->
+
+      <label for="emailInput">Email:</label> <!-- Etiqueta para el campo email -->
+      <input type="email" id="emailInput" name="email" required aria-required="true" /> <!-- Campo email -->
+      <span class="error" id="error-email" aria-live="polite"></span> <!-- Mensaje de error email -->
+
+      <label for="subjectInput">Subject:</label> <!-- Etiqueta para el campo asunto -->
+      <input type="text" id="subjectInput" name="subject" required /> <!-- Campo asunto -->
+      <span class="error" id="error-subject" aria-live="polite"></span> <!-- Mensaje de error asunto -->
+
+      <label for="messageInput">Message:</label> <!-- Etiqueta para el campo mensaje -->
+      <textarea id="messageInput" name="message" required></textarea> <!-- Área de texto para mensaje -->
+      <span class="error" id="error-message" aria-live="polite"></span> <!-- Mensaje de error mensaje -->
+
+      <button type="submit">Send</button> <!-- Botón para enviar el formulario -->
+    </form>
+  </main>
+
+  <footer>
+    <p>© San Martín Public Library</p> <!-- Pie de página -->
+  </footer>
+
+  <script src="scripts.js"></script> <!-- Script de JavaScript -->
+</body>
+</html>

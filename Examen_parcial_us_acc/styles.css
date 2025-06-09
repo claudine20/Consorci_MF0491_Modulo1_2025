@@ -1,0 +1,91 @@
+/* Estilo base para que el footer esté siempre al fondo */
+html, body {
+  height: 100%; /* Ocupan toda la altura del viewport */
+  margin: 0; /* Sin márgenes */
+  display: flex; /* Activar flexbox */
+  flex-direction: column; /* Columnas: header > main > footer */
+}
+
+/* Para asegurarse de que main crezca y empuje el footer hacia abajo*/
+main {
+  flex: 1; /* Ocupa todo el espacio restante */
+}
+
+/* Estilo para el encabezado */
+header {
+  background-color: #004080; /* Fondo azul accesible */
+  color: white; /* Texto blanco para contraste */
+  padding: 1rem; /* Espaciado interior */
+}
+/* Ajustar los estilos del <nav> dentro del <header> para mejorar su aspecto visual, */
+header nav a {
+  color: white; /* Enlaces blancos dentro del encabezado */
+  font-weight: bold;
+}
+
+/* Estilo general para imágenes */
+img {
+  max-width: 40%; /* Limita el ancho máximo */
+  height: auto; /* Mantiene proporciones */ 
+  display: block;
+  margin: 1rem auto;
+}
+
+
+
+/* Estilo base para el cuerpo del sitio */
+body {
+  font-family: Arial, sans-serif; /* Fuente legible */
+  background: white; /* Fondo blanco por defecto */
+  color: #111; /* Texto oscuro para buen contraste */
+  line-height: 1.6; /* Espaciado de líneas legible */
+  padding: 1rem; /* Relleno general */
+}
+
+/* Estilo de navegación: lista sin viñetas y en línea */
+nav ul {
+  list-style: none; /* Quitar puntos de lista */
+  display: flex; /* Mostrar elementos en fila */
+  gap: 1rem; /* Espacio entre enlaces */
+}
+
+/* Estilo para el formulario de contacto alineado a la izquierda */
+form {
+  display: flex; /* Usamos flexbox para organizar los elementos */
+  flex-direction: column; /* Elementos dispuestos en columna (uno debajo del otro) */
+  gap: 0.5rem; /* Espacio vertical entre los campos */
+  max-width: 500px; /* Ancho máximo para no ocupar toda la pantalla */
+  margin-left: 1rem; /* Margen a la izquierda para separarlo del borde */
+}
+
+
+
+
+
+/* Enlaces básicos */
+a {
+  color: #004080; /* Color azul accesible */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+/* Estilo de enfoque para accesibilidad */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid #ffa500; /* Contorno naranja para indicar foco */
+}
+
+/* Espaciado entre botones */
+button {
+  margin: 0.5rem 0; /* Margen vertical */
+}
+
+/* Estilo para mensajes de error accesibles */
+.error {
+  color: red; /* Texto rojo para errores */
+  font-size: 0.9rem; /* Tamaño ligeramente menor */
+}
+
+/* Modo oscuro activado por clase en body */
+body.dark-mode {
+  background-color: #121212; /* Fondo oscuro */
+  color: #f0f0f0; /* Texto claro */
+}
