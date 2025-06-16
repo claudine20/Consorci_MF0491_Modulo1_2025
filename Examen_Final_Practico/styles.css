@@ -1,0 +1,156 @@
+/* Elimina márgenes y aplica box-sizing universal */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos base para el cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #ef5908; /* Fondo naranja */
+  padding: 10px 0;
+  padding-bottom: 30px; /* Agrega espacio solo en la parte inferior */
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  justify-content: flex-start; /* Alinea a la izquierda */
+  gap: 20px; /* Espacio entre enlaces */
+  padding-left: 20px; /* Espacio desde el borde izquierdo */
+  margin-bottom: 16px; /* Espacio debajo del menú */
+  
+}
+
+/* Enlaces del menú */
+nav a {
+  color: white;
+  text-decoration: none; /* Sin subrayado */
+  margin-top: 20px; /* Espacio superior para los enlaces */
+  font-weight: bold; /* Negrita para los enlaces */
+}
+
+/* Área principal centrada */
+main {
+  max-width: 600px;
+  margin: 40px auto 0 auto; /* Aumenta espacio superior */
+}
+
+/* Estilo del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre campos del formulario */
+  margin-bottom: 24px; /* Espacio debajo del formulario */
+}
+
+/* Campos de texto */
+input {
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Estilo base para todos los botones (estructura, forma) */
+button {
+  border-radius: 4px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Color azul solo para botones sin clase específica */
+button:not(.delete-btn):not(.complete-btn) {
+  background-color: #1976d2;
+  color: white;
+}
+
+button:not(.delete-btn):not(.complete-btn):hover {
+  background-color: #1565c0;
+}
+
+/* Botón "Completada" en verde */
+.complete-btn {
+  background-color: #43a047; /* Verde medio */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.complete-btn:hover {
+  background-color: #388e3c; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilo para el botón de eliminar */
+.delete-btn {
+  background-color: #e53935;  /* Rojo fuerte */
+  color: white;               /* Texto blanco */
+  border: none;               /* Sin borde */
+  padding: 5px 10px;
+  border-radius: 4px;         /* Bordes redondeados */
+  transition: background-color 0.3s;
+}
+
+/* Cambia a un rojo más oscuro al pasar el mouse */
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* Lista de tareas sin viñetas */
+ul#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Cada tarea */
+li.task {
+  display: flex;
+  justify-content: space-between;
+  background: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 5px solid #2196f3; /* Barra azul en tareas normales */
+}
+
+/* Estilo para tareas completadas */
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  border-left-color: green; /* Barra verde para completadas */
+}
+
+/* Contenedor de filtros */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+main p {
+  text-align: justify; /* Justifica el texto en los párrafos */
+}
+
+
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column; /* Asegura que los campos del formulario se apilen verticalmente */
+  }
+
+  nav {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Centra los enlaces */
+  }
+}

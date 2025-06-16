@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Lenguaje español para accesibilidad y SEO -->
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Escala adaptativa para responsive -->
+  <title>TaskPortal</title> <!-- Título que aparece en la pestaña -->
+  <link rel="stylesheet" href="styles.css"/> <!-- Enlace a archivo de estilos externo -->
+</head>
+<body>
+  <!-- Encabezado con barra de navegación -->
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a> <!-- Enlace a la página principal -->
+      <a href="about.html">Nosotros</a> <!-- Enlace a la página de información -->
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Mini Portal de Tareas</h1> <!-- Título principal -->
+
+    <!-- Formulario para agregar tareas -->
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Título de la tarea" required /> <!-- Campo obligatorio -->
+      <input type="text" id="task-desc" placeholder="Descripción (opcional)" /> <!-- Campo opcional -->
+      <button type="submit">Agregar Tarea</button> <!-- Botón para enviar el formulario -->
+    </form>
+
+    <!-- Filtros para ver tareas por estado -->
+    <div class="filters">
+      <button data-filter="all">Todas</button> <!-- Mostrar todas las tareas -->
+      <button data-filter="completed">Completadas</button> <!-- Mostrar solo completadas -->
+      <button data-filter="pending">Pendientes</button> <!-- Mostrar solo pendientes -->
+    </div>
+
+    <!-- Lista de tareas dinámica -->
+    <ul id="task-list"></ul>
+  </main>
+
+  <script src="script.js"></script> <!-- Enlace al archivo de JavaScript -->
+</body>
+</html>
