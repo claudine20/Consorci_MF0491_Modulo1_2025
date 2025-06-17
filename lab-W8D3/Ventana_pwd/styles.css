@@ -1,0 +1,49 @@
+/* Fondo general */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #7f7fd5, #86a8e7, #91eae4);
+  text-align: center;
+  padding: 40px;
+  color: #333;
+}
+
+/* Caja de login centrada y estilizada */
+.login-box {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Inputs y botón */
+input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Mensaje de error o éxito */
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+}
