@@ -1,0 +1,39 @@
+/* Estilo general del documento */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 30px;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado con color de fondo */
+header {
+  background-color: #004aad;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Secciones principales con fondo blanco */
+section {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos de sección */
+h2 {
+  color: #004aad;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  font-style: italic;
+}
