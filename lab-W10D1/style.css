@@ -1,0 +1,129 @@
+/* Estilos generales para el body */
+body {
+    font-family: 'Georgia', serif; /* Fuente con un toque clásico */
+    margin: 0;
+    padding: 20px;
+    background-color: #2c3e50; /* Un gris oscuro para el fondo */
+    color: #ecf0f1; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio verticalmente */
+    min-height: 100vh;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Contenedor principal del juego */
+#game-container {
+    background-color: #34495e; /* Un tono de gris ligeramente más claro */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    max-width: 800px; /* Ancho máximo para el contenedor */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #7f8c8d; /* Borde sutil */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+/* Contenedor de la imagen del escenario */
+#scene-image-container {
+    max-height: 400px; /* Altura máxima para la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#scene-image {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+}
+
+/* Estilos para el texto de la historia */
+#story-text {
+    font-size: 1.2em; /* Tamaño de fuente ligeramente más grande */
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente transparente para el texto */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: justify; /* Texto justificado */
+}
+
+/* Contenedor de las opciones (botones) */
+#options-container {
+    display: flex; /* Usa flexbox para los botones */
+    flex-wrap: wrap; /* Permite que los botones salten de línea si no caben */
+    justify-content: center; /* Centra los botones */
+    gap: 15px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Estilos para los botones de opción */
+.option-button {
+    background-color: #27ae60; /* Color verde vibrante */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Transiciones suaves */
+    flex-grow: 1; /* Permite que los botones crezcan para ocupar espacio */
+    max-width: 48%; /* Dos botones por fila en un ancho decente */
+    min-width: 180px; /* Ancho mínimo para que los botones no sean demasiado pequeños */
+}
+
+.option-button:hover {
+    background-color: #2ecc71; /* Verde más claro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+.option-button:active {
+    background-color: #27ae60; /* Vuelve al color original al hacer clic */
+    transform: translateY(0); /* Deshace la elevación */
+}
+
+/* Estilos para el cuadro de mensaje especial */
+#message-box {
+    background-color: #f39c12; /* Color naranja */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    opacity: 1; /* Opacidad inicial para que sea visible si se muestra */
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important; /* Oculta completamente el elemento */
+}
+
+/* Animación de fade-in (opcional, para texto o imágenes) */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #game-container {
+        padding: 15px;
+    }
+
+    .option-button {
+        max-width: 100%; /* Botones de ancho completo en pantallas pequeñas */
+    }
+}
