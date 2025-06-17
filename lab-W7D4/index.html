@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peso Ideal y Ticket de Cine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sección 1: Cálculo de peso ideal -->
+  <section class="section">
+    <h2>1. Cálculo de Peso Ideal (IMC)</h2>
+
+    <!-- Inputs para altura y peso -->
+    <label for="height">Altura (en metros):</label>
+    <input type="number" step="0.01" id="height">
+
+    <label for="weight">Peso (en kilos):</label>
+    <input type="number" step="0.1" id="weight">
+
+    <!-- Botón para calcular IMC -->
+    <button onclick="calculateIdealWeight()">Calcular IMC</button>
+
+    <!-- Resultado del cálculo -->
+    <div id="imcResult"></div>
+  </section>
+
+  <!-- Sección 2: Ticket de cine -->
+  <section class="section">
+    <h2>2. Rellenar Ticket de Cine</h2>
+
+    <!-- Inputs del formulario -->
+    <label for="name">Nombre:</label>
+    <input type="text" id="name">
+
+    <label for="date">Fecha:</label>
+    <input type="date" id="date">
+
+    <label for="row">Fila:</label>
+    <input type="text" id="row">
+
+    <label for="seat">Asiento:</label>
+    <input type="text" id="seat">
+
+    <!-- Botón para mostrar los datos en el ticket -->
+    <button onclick="fillTicket()">Enviar</button>
+
+    <!-- Ticket maquetado con divs -->
+    <div id="ticket">
+      <h3>🎬 Entrada de Cine 🎬</h3>
+      <p><strong>Nombre:</strong> <span id="ticketName">----</span></p>
+      <p><strong>Fecha:</strong> <span id="ticketDate">----</span></p>
+      <p><strong>Fila:</strong> <span id="ticketRow">----</span></p>
+      <p><strong>Asiento:</strong> <span id="ticketSeat">----</span></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

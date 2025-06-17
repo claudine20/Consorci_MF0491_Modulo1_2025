@@ -1,0 +1,35 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Secciones separadas */
+.section {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Espacio entre inputs */
+input, label, button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilo del ticket de cine */
+#ticket {
+  margin-top: 20px;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #eee, #ddd);
+  border: 2px dashed #000;
+  width: 300px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 10px;
+}
