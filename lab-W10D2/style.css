@@ -1,0 +1,129 @@
+/* Estilos generales para el body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    margin: 0;
+    padding: 20px;
+    background-color: #36454F; /* Gris carbón para el fondo */
+    color: #E0E0E0; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    /* Opcional: una imagen de fondo global para la aventura */
+    /* background-image: url('img/ruina_fondo.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center;  */
+}
+
+/* Contenedor principal del juego */
+#game-container {
+    background-color: #2F4F4F; /* Verde oscuro grisáceo */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    max-width: 700px; /* Ancho máximo */
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid #5F9EA0; /* Borde aguamarina */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Más espacio entre secciones */
+}
+
+/* Título de la escena */
+#scene-title {
+    font-size: 2em; /* Tamaño de fuente grande */
+    color: #FFD700; /* Dorado para el título */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Sombra de texto sutil */
+}
+
+/* Estilos para el texto de la historia */
+#story-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo ligeramente transparente */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: justify; /* Texto justificado */
+    border-left: 5px solid #FFD700; /* Borde izquierdo dorado */
+}
+
+/* Contenedor de las opciones (botones) */
+#options-container {
+    display: flex;
+    flex-direction: column; /* Botones apilados verticalmente */
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Estilos para los botones de opción */
+.option-button {
+    background-color: #4682B4; /* Azul acero */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%; /* Botones de ancho completo */
+    box-sizing: border-box; /* Incluye padding y border en el width */
+}
+
+.option-button:hover {
+    background-color: #5F9EA0; /* Aguamarina al pasar el ratón */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.option-button:active {
+    background-color: #4682B4;
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Estilos para el área de estado del juego */
+#game-status {
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #FFD700;
+}
+
+#treasure-count {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+
+.character-image {
+  width: 300px; /* Ajusta el ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #game-container {
+        padding: 20px;
+    }
+
+    #scene-title {
+        font-size: 1.7em;
+    }
+
+    #story-text {
+        font-size: 1em;
+    }
+
+    .option-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+}
