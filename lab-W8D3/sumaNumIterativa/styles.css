@@ -1,0 +1,38 @@
+/* Estilos básicos */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f8ff;
+  text-align: center;
+  padding: 30px;
+}
+
+#startButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#startButton:hover {
+  background-color: #45a049;
+}
+
+#resultBox {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+ul {
+  text-align: left;
+  list-style-type: square;
+  padding: 10px;
+}
