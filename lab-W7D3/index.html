@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Greeting & Operation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 20px;
+      white-space: pre-line; /* Respeta los saltos de línea con \n */
+    }
+  </style>
+</head>
+<body>
+  <h1>1. Iterative Greeting</h1>
+  <!-- Botón para iniciar la parte de saludo iterativo -->
+  <button onclick="startGreeting()">Start Greeting Loop</button>
+
+  <h1>2. Operation Calculator</h1>
+  <!-- Botón para iniciar la operación sin return -->
+  <button onclick="startOperation()">Start Operation (No return)</button>
+  <!-- Botón para iniciar la operación con return -->
+  <button onclick="startOperationWithReturn()">Start Operation (With return)</button>
+
+  <!-- Div donde se mostrará la salida de los resultados -->
+  <div id="output"></div>
+
+  <!-- Archivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
