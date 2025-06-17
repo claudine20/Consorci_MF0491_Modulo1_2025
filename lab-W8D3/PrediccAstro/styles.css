@@ -1,0 +1,49 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0e8ff;
+  padding: 20px;
+}
+
+h1 {
+  color: purple;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Imagen de la bola de cristal */
+#predictButton {
+  width: 150px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  transition: transform 0.2s;
+}
+
+#predictButton:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor del resultado */
+#result {
+  margin-top: 30px;
+}
+
+#predictionText {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#predictionImage {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 10px;
+}
