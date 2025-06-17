@@ -1,0 +1,63 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Contenedor del mensaje */
+#messageContainer {
+  margin: 20px auto;
+  max-width: 500px;
+  position: relative;
+}
+
+#messageText {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#messageImage {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Botones de distancia */
+#buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+/* Botón de cerrar */
+#closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: none; /* Se muestra solo cuando quedan 0 km */
+}
+
+/* Imagen final al llegar */
+body.final {
+  background-image: url('img/playa-final.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+body.final * {
+  display: none;
+}

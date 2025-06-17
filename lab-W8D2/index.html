@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Viaje a Tarragona</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Título del GPS -->
+  <h1 id="title">🚗 Rumbo a Tarragona (100 km) 🚗</h1>
+
+  <!-- Div donde se mostrará el mensaje y la imagen correspondiente -->
+  <div id="messageContainer">
+    <p id="messageText"></p>
+    <img id="messageImage" src="" alt="" />
+    <!-- Botón para cerrar solo visible al llegar -->
+    <button id="closeButton" onclick="endJourney()">X</button>
+  </div>
+
+  <!-- Botones con las diferentes distancias -->
+  <div id="buttons">
+    <button onclick="updateGPS(100)">100 km</button>
+    <button onclick="updateGPS(50)">50 km</button>
+    <button onclick="updateGPS(15)">15 km</button>
+    <button onclick="updateGPS(0)">¡Llegada!</button>
+  </div>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
