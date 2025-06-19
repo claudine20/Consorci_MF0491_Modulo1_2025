@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+header nav a {
+  color: #fff;
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+.producto {
+  display: flex;
+  padding: 2em;
+}
+
+.producto img {
+  width: 300px;
+  margin-right: 2em;
+}
+
+.precio {
+  font-size: 1.5em;
+  color: green;
+  margin: 0.5em 0;
+}
+
+button {
+  padding: 0.5em 1em;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
